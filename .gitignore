@@ -8,6 +8,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .idea
+report.jpg
 
 # C extensions
 *.so
