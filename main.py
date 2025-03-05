@@ -16,10 +16,15 @@ client = OpenAI(api_key=OPEN_API_KEY)
 completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "system", "content": "Вы ассистент, который хочет помочь."},
         {
             "role": "user",
-            "content": "Write a haiku about recursion in programming."
+            "content": f"""Возьми этот документ: \n 
+            {lines}.
+            и ответь напиши мне:
+            1) № счета (полностью)
+            2) Сумма итого с НДС
+            3) Адрес склада отгрузки"""
         }
     ]
 )
